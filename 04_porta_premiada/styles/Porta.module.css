@@ -1,11 +1,13 @@
 .porta{
 	display: flex;
 	flex-direction: column;
-	width: 12.5rem;
-	height: 19.375rem;
 	background-color: chocolate;
 	align-items: center;
 	padding: 0.9375rem;
+
+	/* var */
+	width: var(--area-porta-largura);
+	height: var(--area-porta-altura);
 }
 
 .numero{
