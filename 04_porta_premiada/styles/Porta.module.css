@@ -5,6 +5,8 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 0.3125rem;
+	background-color: transparent;
+	border: none;
 }
 
 .estrutura{
@@ -51,7 +53,6 @@
 	border-left: 5px solid yellow;
 	border-top: 5px solid yellow;
 	border-right: 5px solid yellow;
-	cursor: pointer;
 }
 
 .selecionada .numero{
