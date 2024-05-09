@@ -1,0 +1,10 @@
+.cartao{
+	display: flex;
+	width: 18.75rem;
+	height: 18.75rem;
+	background-color: white;
+	margin: 0.1875rem;
+	font-size: 2rem;
+	padding: 1.25rem;
+}
+
