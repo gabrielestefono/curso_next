@@ -3,7 +3,7 @@ import { criarPortas, atualizarPortas } from "@/functions/portas";
 import { useState } from "react";
 
 export default function Home() {
-  const [portas, setPortas] = useState(criarPortas(20, 5));
+  const [portas, setPortas] = useState(criarPortas(3, 1));
 
   function renderizarPortas() { 
     return portas.map((porta) => 
