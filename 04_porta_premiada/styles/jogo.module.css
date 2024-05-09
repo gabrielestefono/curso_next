@@ -12,3 +12,18 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+.botoes{
+	display: flex;
+	justify-content: center;
+	margin-top: 2.5rem;
+}
+
+.botoes button{
+	background-color: #c0392c;
+	color: white;
+	font-size: 2rem;
+	border: none;
+	padding: 0.625rem 1.25rem;
+	cursor: pointer;
+}
