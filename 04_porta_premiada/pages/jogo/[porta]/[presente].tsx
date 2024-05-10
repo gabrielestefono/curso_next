@@ -10,10 +10,22 @@ export default function Jogo(){
 	const router = useRouter();
 	
 	const [portas, setPortas] = useState<PortaModel[]>([]);
+	const [valido, setValido] = useState<boolean>(false);
 
 	useEffect(()=>{
 		const portas: number = +router.query.porta!;
 		const presente: number = +router.query.presente!;
+
+		const quantidadePortasValidas = portas >= 3 && portas <= 100;
+		const temPresenteValido = presente >= 1 && presente <= portas;
+		setValido(quantidadePortasValidas && temPresenteValido)
+
+	},[router.query])
+
+	useEffect(()=>{
+		const portas: number = +router.query.porta!;
+		const presente: number = +router.query.presente!;
+
 		setPortas(criarPortas(portas, presente));
 	},[router.query])
 
@@ -24,7 +36,8 @@ export default function Jogo(){
 	return(
 		<div className={styles.jogo}>
 			<div className={styles.portas}>
-      	{renderizarPortas()}
+			{valido && renderizarPortas()}
+			{!valido && <h1>Valores Inválidos!</h1>}
 			</div>
 			<div className={styles.botoes}>
 				<Link href="/">

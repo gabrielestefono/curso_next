@@ -22,7 +22,7 @@ export default function Home() {
           <EntradaNumerica value={comPresente} onChange={novaQuantidade => setComPresente(novaQuantidade)} texto="Porta com Presente?"/>
         </Cartao>
         <Cartao bgcolor="#28A085">
-          <Link href={`/jogo/${qtdePortas}/${comPresente}`} style={{flex: "1", margin: "0"}}>
+          <Link href={`/jogo/${qtdePortas}/${comPresente}`} style={{flex: "1", margin: "0"}} passHref>
             <h2 className={styles.link}> Iniciar</h2>
           </Link>
         </Cartao>
